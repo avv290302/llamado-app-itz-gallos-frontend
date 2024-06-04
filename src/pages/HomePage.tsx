@@ -2,9 +2,9 @@ import SearchBar, { SearchForm } from '@/components/SearchBar'
 import { useNavigate } from 'react-router-dom'
 import landingImage from '../assets/rol.png'
 //import  Image  from '../assets/caballito.png';
-import Image2 from '../assets/arte1.png'
-import Image3 from '../assets/arte2.png'
-import Image4 from '../assets/arte3.png'
+import Image2 from '../assets/1.png'
+import Image3 from '../assets/2.png'
+import Image4 from '../assets/3.png'
 
 import {
   Carousel,

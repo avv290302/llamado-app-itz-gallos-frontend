@@ -14,7 +14,7 @@ export default function AuthCallBackPage() {
             createUser({ auth0Id: user.sub, email: user.email})
             hasCreateUser.current = true;
         }
-        navigate('/');
+        navigate('/inicio');
     }, [ createUser, navigate, user])
     return(
         <div>Loading...</div>
