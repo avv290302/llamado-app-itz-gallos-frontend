@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage';
 import AuthCallBackPage from './pages/AuthCallBackPage';
 import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
-import Page3 from './pages/Page3'; // Importa la página Page3
+import Page3 from './pages/Page3'; 
 import ProtectedRoute from './layouts/auth/ProtectedRoute';
 import ManageRestaurantPage from './pages/ManageRestaurantPage';
 import SearchPage from './pages/SearchPage';
