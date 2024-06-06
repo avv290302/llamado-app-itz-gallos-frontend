@@ -9,6 +9,7 @@ import ProtectedRoute from './layouts/auth/ProtectedRoute';
 import ManageRestaurantPage from './pages/ManageRestaurantPage';
 import SearchPage from './pages/SearchPage';
 import Inicio from './pages/Inicio';
+import Rondas from './pages/Rondas';
 
 const AppRoutes = () => {
   return (
@@ -75,6 +76,15 @@ const AppRoutes = () => {
             </Layout>
           }
         />
+        {/* Nueva ruta para Rondas */}
+        <Route
+          path="/rondas"
+          element={
+            <Layout>
+              <Rondas />
+            </Layout>
+          }
+        />
       </Route>
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
@@ -82,3 +92,4 @@ const AppRoutes = () => {
 };
 
 export default AppRoutes;
+
