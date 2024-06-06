@@ -27,7 +27,7 @@ interface FormValues {
   anillos: string[];
 }
 
-const Page2: React.FC = () => {
+export default function Page2 () {
   const [equipos, setEquipos] = useState<{ 
     nombreEquipo: string; 
     nombreSoltador: string; 
@@ -196,6 +196,4 @@ const Page2: React.FC = () => {
       </table>
     </div>
   );
-};
-
-export default Page2;
+}
