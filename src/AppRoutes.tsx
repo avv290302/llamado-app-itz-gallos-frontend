@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './layouts/layouts';
 import HomePage from './pages/HomePage';
 import AuthCallBackPage from './pages/AuthCallBackPage';
-import Page1 from './pages/Page1';
+//import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3'; 
 import ProtectedRoute from './layouts/auth/ProtectedRoute';
@@ -51,14 +51,8 @@ const AppRoutes = () => {
           }
         />
         {/* Rutas para Page1, Page2 y Page3 */}
-        <Route
-          path="/gallos/3"
-          element={
-            <Layout>
-              <Page1 />
-            </Layout>
-          }
-        />
+        
+        
         <Route
           path="/gallos/4"
           element={
