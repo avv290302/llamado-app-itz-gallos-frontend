@@ -195,4 +195,3 @@ export default function Page1 () {
     </div>
   );
 }
-

@@ -1,15 +1,15 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Layout from './layouts/layouts';
-import HomePage from './pages/HomePage';
-import AuthCallBackPage from './pages/AuthCallBackPage';
-import Page1 from 'src/pages/Page1';
-import Page2 from 'src/pages/Page2';
-import Page3 from 'src/pages/Page3'; 
-import ProtectedRoute from './layouts/auth/ProtectedRoute';
-import ManageRestaurantPage from './pages/ManageRestaurantPage';
-import SearchPage from './pages/SearchPage';
-import Inicio from './pages/Inicio';
-import Rondas from './pages/Rondas';
+import Layout from '@/layouts/layouts';
+import HomePage from '@/pages/HomePage';
+import AuthCallBackPage from '@/pages/AuthCallBackPage';
+import Page1 from '@/pages/Page1';
+import Page2 from '@/pages/Page2';
+import Page3 from '@/pages/Page3'; 
+import ProtectedRoute from '@/layouts/auth/ProtectedRoute';
+import ManageRestaurantPage from '@/pages/ManageRestaurantPage';
+import SearchPage from '@/pages/SearchPage';
+import Inicio from '@/pages/Inicio';
+import Rondas from '@/pages/Rondas';
 
 const AppRoutes = () => {
   return (
