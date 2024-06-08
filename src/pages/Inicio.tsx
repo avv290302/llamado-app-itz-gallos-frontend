@@ -10,18 +10,16 @@ export default function Inicio() {
         </h1>
         <div className="flex justify-center">
           {/* Utilizamos el componente Link para redirigir a las páginas */}
-          <Link to="/gallos/3" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
+          <Link to="/Gallos/3" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
             3 Gallos
           </Link>
-          <Link to="/gallos/4" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
+          <Link to="/Gallos/4" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
             4 Gallos
           </Link>
-          <Link to="/gallos/5" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <Link to="/Gallos/5" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             5 Gallos
           </Link>
-          <Link to="/Prueba" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            btn prueba
-          </Link>
+          
         </div>
       </div>
     </div>

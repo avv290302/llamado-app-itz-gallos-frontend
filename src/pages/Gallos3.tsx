@@ -27,7 +27,7 @@ interface FormValues {
   anillos: string[];
 }
 
-export default function Page1 () {
+export default function Gallos3 () {
   const [equipos, setEquipos] = useState<{ 
     nombreEquipo: string; 
     nombreSoltador: string; 

@@ -16,8 +16,8 @@ import { Input } from '@/components/ui/input';
 const FormSchema = z.object({
   nombreEquipo: z.string().nonempty({ message: 'El nombre del equipo es requerido.' }),
   nombreSoltador: z.string().nonempty({ message: 'El nombre del soltador es requerido.' }),
-  pesos: z.array(z.string().nonempty({ message: 'El peso es requerido.' })).length(4),
-  anillos: z.array(z.string().nonempty({ message: 'El anillo es requerido.' })).length(4),
+  pesos: z.array(z.string().nonempty({ message: 'El peso es requerido.' })).length(5),
+  anillos: z.array(z.string().nonempty({ message: 'El anillo es requerido.' })).length(5),
 });
 
 interface FormValues {
@@ -27,7 +27,7 @@ interface FormValues {
   anillos: string[];
 }
 
-export default function Page2 () {
+export default function Gallos5 ()  {
   const [equipos, setEquipos] = useState<{ 
     nombreEquipo: string; 
     nombreSoltador: string; 
@@ -42,8 +42,8 @@ export default function Page2 () {
     defaultValues: {
       nombreEquipo: '',
       nombreSoltador: '',
-      pesos: ['', '', '', ''],
-      anillos: ['', '', '', ''],
+      pesos: ['', '', '', '', ''],
+      anillos: ['', '', '', '', ''],
     },
   });
 
@@ -125,7 +125,7 @@ export default function Page2 () {
               </FormItem>
             )}
           />
-          {[0, 1, 2, 3].map(index => (
+          {[0, 1, 2, 3, 4].map(index => (
             <div key={index} className="flex justify-between" style={{ justifyContent: 'space-between' }}>
               <FormField
                 control={form.control}
@@ -163,37 +163,36 @@ export default function Page2 () {
         <thead>
           <tr>
             <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Nombre del Equipo</th>
-            <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Nombre del Soltador</th>
-            <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Peso 1</th>
-            <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Anillo 1</th>
-            <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Peso 2</th>
-            <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Anillo 2</th>
-            <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Peso 3</th>
-            <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Anillo 3</th>
-            <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Peso 4</th> {/* Añadido */}
-            <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Anillo 4</th> {/* Añadido */}
-            <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          {equipos.map((equipo, index) => (
-            <tr key={index}>
-              <td style={{ border: '1px solid #ddd', padding: '12px', fontSize: '1.2em' }}>{equipo.nombreEquipo}</td>
-              <td style={{ border: '1px solid #ddd', padding: '12px', fontSize: '1.2em' }}>{equipo.nombreSoltador}</td>
-              {equipo.pesos.map((peso, i) => (
-                <React.Fragment key={i}>
-                  <td style={{ border: '1px solid #ddd', padding: '12px', fontSize: '1.2em' }}>{peso}</td>
-                  <td style={{ border: '1px solid #ddd', padding: '12px', fontSize: '1.2em' }}>{equipo.anillos[i]}</td>
-                </React.Fragment>
-              ))}
-              <td style={{ border: '1px solid #ddd', padding: '12px', fontSize: '1.2em' }}>
-                <Button onClick={() => onEdit(index)} className="mr-2">Editar</Button>
-                <Button onClick={() => onDelete(index)} variant="destructive">Eliminar</Button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
+            <th style={{ border: '1px solid #ddd',
+padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Nombre del Soltador</th>
+{[0, 1, 2, 3, 4].map(index => (
+  <React.Fragment key={index}>
+    <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Peso {index + 1}</th>
+    <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Anillo {index + 1}</th>
+  </React.Fragment>
+))}
+<th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Acciones</th>
+</tr>
+</thead>
+<tbody>
+{equipos.map((equipo, index) => (
+<tr key={index}>
+  <td style={{ border: '1px solid #ddd', padding: '12px', fontSize: '1.2em' }}>{equipo.nombreEquipo}</td>
+  <td style={{ border: '1px solid #ddd', padding: '12px', fontSize: '1.2em' }}>{equipo.nombreSoltador}</td>
+  {equipo.pesos.map((peso, i) => (
+    <React.Fragment key={i}>
+      <td style={{ border: '1px solid #ddd', padding: '12px', fontSize: '1.2em' }}>{peso}</td>
+      <td style={{ border: '1px solid #ddd', padding: '12px', fontSize: '1.2em' }}>{equipo.anillos[i]}</td>
+    </React.Fragment>
+  ))}
+  <td style={{ border: '1px solid #ddd', padding: '12px', fontSize: '1.2em' }}>
+    <Button onClick={() => onEdit(index)} className="mr-2">Editar</Button>
+    <Button onClick={() => onDelete(index)} variant="destructive">Eliminar</Button>
+  </td>
+</tr>
+))}
+</tbody>
+</table>
+</div>
+);
 }

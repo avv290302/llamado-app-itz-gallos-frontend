@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -17,8 +16,8 @@ import { Input } from '@/components/ui/input';
 const FormSchema = z.object({
   nombreEquipo: z.string().nonempty({ message: 'El nombre del equipo es requerido.' }),
   nombreSoltador: z.string().nonempty({ message: 'El nombre del soltador es requerido.' }),
-  pesos: z.array(z.string().nonempty({ message: 'El peso es requerido.' })).length(3),
-  anillos: z.array(z.string().nonempty({ message: 'El anillo es requerido.' })).length(3),
+  pesos: z.array(z.string().nonempty({ message: 'El peso es requerido.' })).length(4),
+  anillos: z.array(z.string().nonempty({ message: 'El anillo es requerido.' })).length(4),
 });
 
 interface FormValues {
@@ -28,7 +27,7 @@ interface FormValues {
   anillos: string[];
 }
 
-export default function Prueba () {
+export default function Gallos4 () {
   const [equipos, setEquipos] = useState<{ 
     nombreEquipo: string; 
     nombreSoltador: string; 
@@ -43,8 +42,8 @@ export default function Prueba () {
     defaultValues: {
       nombreEquipo: '',
       nombreSoltador: '',
-      pesos: ['', '', ''],
-      anillos: ['', '', ''],
+      pesos: ['', '', '', ''],
+      anillos: ['', '', '', ''],
     },
   });
 
@@ -126,7 +125,7 @@ export default function Prueba () {
               </FormItem>
             )}
           />
-          {[0, 1, 2].map(index => (
+          {[0, 1, 2, 3].map(index => (
             <div key={index} className="flex justify-between" style={{ justifyContent: 'space-between' }}>
               <FormField
                 control={form.control}
@@ -171,6 +170,8 @@ export default function Prueba () {
             <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Anillo 2</th>
             <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Peso 3</th>
             <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Anillo 3</th>
+            <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Peso 4</th> {/* Añadido */}
+            <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Anillo 4</th> {/* Añadido */}
             <th style={{ border: '1px solid #ddd', padding: '12px', backgroundColor: '#f2f2f2', fontSize: '1.2em' }}>Acciones</th>
           </tr>
         </thead>

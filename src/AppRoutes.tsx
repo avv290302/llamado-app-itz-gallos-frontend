@@ -2,15 +2,15 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './layouts/layouts';
 import HomePage from './pages/HomePage';
 import AuthCallBackPage from './pages/AuthCallBackPage';
-//import Page1 from './pages/Page1';
-import Page2 from './pages/Page2';
-import Page3 from './pages/Page3'; 
+import Gallos3 from './pages/Gallos3';
+import Gallos4 from './pages/Gallos4';
+import Gallos5 from './pages/Gallos5';
 import ProtectedRoute from './layouts/auth/ProtectedRoute';
 import ManageRestaurantPage from './pages/ManageRestaurantPage';
 import SearchPage from './pages/SearchPage';
 import Inicio from './pages/Inicio';
 import Rondas from './pages/Rondas';
-import Prueba from './pages/Prueba';
+
 const AppRoutes = () => {
   return (
     <Routes>
@@ -42,30 +42,31 @@ const AppRoutes = () => {
             </Layout>
           }
         />
-         <Route
-          path="/prueba"
-          element={
-            <Layout>
-              <Prueba />
-            </Layout>
-          }
-        />
+         
         {/* Rutas para Page1, Page2 y Page3 */}
         
         
         <Route
-          path="/gallos/4"
+          path="/Gallos/3"
           element={
             <Layout>
-              <Page2 />
+              <Gallos3 />
             </Layout>
           }
         />
         <Route
-          path="/gallos/5"
+          path="/Gallos/4"
           element={
             <Layout>
-              <Page3 />
+              <Gallos4 />
+            </Layout>
+          }
+        />
+         <Route
+          path="/Gallos/5"
+          element={
+            <Layout>
+              <Gallos5 />
             </Layout>
           }
         />
