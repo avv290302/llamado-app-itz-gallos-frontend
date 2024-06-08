@@ -19,6 +19,9 @@ export default function Inicio() {
           <Link to="/gallos/5" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             5 Gallos
           </Link>
+          <Link to="/Prueba" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            btn prueba
+          </Link>
         </div>
       </div>
     </div>
